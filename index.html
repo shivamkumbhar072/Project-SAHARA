@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Liter&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAHARA-Home page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="suboptions.css">
+    <link rel="icon" href="Icon.png">
+    <script defer src="app.js"></script>
+    <script async defer src="https://maps.gomaps.pro/maps/api/js?key=AlzaSyU8TEalXx_JjxFGaN6HnoWOyEdtNOtPxDl&libraries=places" onload="initMap()"></script>
+</head>
+<body>
+    <form action="/action" class="navbar">
+        <div class="logo">
+            <img src="logo.png" class="image">
+        </div>
+            
+        <input type="text" id="searchBox" placeholder="Search for places" class="searchbar" name = "search">
+        <div class="options">
+            <div class="logi">
+                <label for="login"><span class="material-symbols-outlined">person</span></label>
+                <a href="#" class="anchor" id = "login">Login</a>
+            </div>
+            <a href="#" class="menu"><span class="material-symbols-outlined menu-option" >menu</span></a>
+        </div>
+    </form>
+    <div class="navbar-2">
+        <label for="click" id ="filter-btn">Filters</label>
+        <input type="checkbox" id = "click">
+        <div class="filters">
+            <button class="button">Top localities</button>
+            <button class="button">Budget</button>
+            <button class="button">Amenities</button>
+            <button class="button">Occupancy</button>
+            <button class="button food-availability">Food availability</button>
+        </div>
+    </div>
+    <div class="advertise">
+        <div class="add">
+            <h3>PG Hunting Made Simple & Stress-Free!</h3>
+        </div>
+        <div class="info">
+            <p>Discover comfordable and affordable PG in your prefered location</p>
+        </div>
+        
+        <div id="mapContainer">
+            <div id="map"></div>
+        </div>
+    </div>
+    <h2 class="recommendation-heading">Top Picks for You</h2>
+    <div class="recommendation">
+        <!-- pg1 -->
+        <div class="pg-card">
+            <div class="pic">
+                <img src="Data/bed1.webp" alt="">
+            </div>
+            <div class="details">
+                <h3 id = "price">Price : 3500 RS/Month</h3>
+                <div class="location">
+                    <span class="material-symbols-outlined">location_on</span>
+                    <a id = "location" href="#">Location</a>
+                </div>
+                <div class="facilities">
+                    <div><p id ="p1">2</p> <span class="material-symbols-outlined">bed</span></div>
+                    <div><p id = "p2">PG</p><span class="material-symbols-outlined">house</span></div>
+                </div>
+            </div>
+        </div>
+        <!-- pg2-->
+        <div class="pg-card">
+            <div class="pic">
+                <img src="Data/bed2.jpg" alt="">
+            </div>
+            <div class="details">
+                <h3 id = "price">Price : 5000 RS/Month</h3>
+                <div class="location">
+                    <span class="material-symbols-outlined">location_on</span>
+                    <a id = "location" href="#">Location</a>
+                </div>
+                <div class="facilities">
+                    <div><p id ="p1">2</p> <span class="material-symbols-outlined">bed</span></div>
+                    <div><p id = "p2">PG</p><span class="material-symbols-outlined">house</span></div>
+                </div>
+            </div>
+        </div>
+        <!-- pg3 -->
+        <div class="pg-card">
+            <div class="pic">
+                <img src="Data/bed3.jpg" alt="">
+            </div>
+            <div class="details">
+                <h3 id = "price">Price : 3000 RS/Month</h3>
+                <div class="location">
+                    <span class="material-symbols-outlined">location_on</span>
+                    <a id = "location" href="#">Location</a>
+                </div>
+                <div class="facilities">
+                    <div><p id ="p1">2</p> <span class="material-symbols-outlined">bed</span></div>
+                    <div><p id = "p2">PG</p><span class="material-symbols-outlined">house</span></div>
+                </div>
+            </div>
+        </div>
+        <!-- pg4 -->
+        <div class="pg-card">
+            <div class="pic">
+                <img src="Data/bed4.jpg" alt="">
+            </div>
+            <div class="details">
+                <h3 id = "price">Price : 4000 RS/Month</h3>
+                <div class="location">
+                    <span class="material-symbols-outlined">location_on</span>
+                    <a id = "location" href="#">Location</a>
+                </div>
+                <div class="facilities">
+                    <div><p id ="p1">2</p> <span class="material-symbols-outlined">bed</span></div>
+                    <div><p id = "p2">PG</p><span class="material-symbols-outlined">house</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="footer">
+        <h2>Why Choose SAHARA ?</h2>
+        <p>We make finding your perfect PG accommodation easy and hassle-free</p>
+        <div class="content">
+            <div class="card-info" id = "card1">
+                <h3>Verified Properties</h3>
+                <p>All properties are personally varified to</p>
+                <p>ensures quality and safety</p>
+            </div>
+            <div class="card-info" id = "card2">
+                <h3>No Brokerage</h3>
+                <p>Connect directly with property owners and</p>
+                <p>save on brokerage fees</p>
+            </div>
+            <div class="card-info" id = "card3">
+                <h3>24 / 7 Support</h3>
+                <p>Our dedicated support is always here</p>
+                <p>to help you</p>
+            </div>
+        </div>
+    </div>
+    <div class="back-to-top">
+        <h3><a href="#">Back to top</a></h3>
+    </div>
+    <div class="information ">
+        <div class="about-us">
+            <h3>About us </h3>
+            <p>SAHARA is  designed to help students easily find and book PG  near their colleges. It offers features like location-based search, virtual tours, AI-driven recommendations, and secure transactions. The platform ensures transparency with verified listings and authentic reviews, making the housing search efficient and reliable.</p>
+        </div>
+        <div class="connect">
+            <h3>Connect with us</h3>
+            <ul>
+                <li><a href="https://www.instagram.com/ajinkya_14a?igsh=a3d5ODU2dTY4N3M1">instagram</a></li>
+                <li><a href="#">facebook</a></li>
+                <li><a href="#">twitter</a></li>
+            </ul>
+
+        </div>
+    </div>
+    <footer>
+        <p>contact us </p>
+        <p>Gmail : sahara@gmail.com</p>
+        <p>phone : 8668400104</p>
+    </footer>
+  
+</body>
+</html>

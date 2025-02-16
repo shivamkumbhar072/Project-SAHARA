@@ -1,0 +1,403 @@
+
+body{
+    margin:0;
+    padding: 0;
+    background-color: #e9ecef;
+    font-family: "Yusei Magic", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #dee2e6;
+}
+.navbar{
+    height:3.5rem;
+    width:100%;
+    box-shadow: 2px 2px 8px #002F31;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top:0px;
+    z-index: 1000;
+    background-color: #dee2e6;
+}
+.logo{
+    height:100%;
+    width:8rem;
+
+}
+.image{
+    width: 128px;
+    height: 100%;
+    object-fit: cover;
+}
+.searchbar{
+    height:2.3rem;
+    width:40rem;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+    outline: 1px solid #002F31;
+}
+.options{
+    height: 100%;
+    width:40rem;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.logi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logi #login{
+    padding-bottom: 2.5px;
+    margin-left: 1px;
+}
+.anchor{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+}
+.menu{
+    margin-top:0.2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    color: black;
+}
+@media(max-width:870px){
+    #about-us{
+        display: none;
+    }
+}
+
+.anchor:hover{
+    color: #002F31;
+    font-size: 1.25rem;
+}
+
+#anchor{
+    padding-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+}
+.navbar-2{
+    height:2.3rem;
+    width: 100%;
+    background-color: #dee2e6;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: fixed;
+    top:3.5rem;
+    z-index: 999;
+}
+.filters{
+    position:fixed;
+    right:-40rem;
+    height: 100%;
+    width: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: right 1s ease-in-out;
+}
+#click:checked ~ .filters{
+    right:30rem;
+}
+
+#filter-btn{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    height:1.5rem;
+    width:4.5rem;
+    background-color: #002F31;
+    padding-left: 1.2rem;
+    font-size: 1.3rem;
+    border:1px solid black;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+#filter-btn:hover{
+    height:1.6rem;
+    width:4.6rem;
+}
+#filter-btn:active{
+    background-color: rgb(17, 29, 17);
+
+}
+#click{
+    display: none;
+}
+.button{
+    height:1.5rem;
+    width:6rem;
+    border:1.2px solid #002F31;
+    border-radius: 0.7rem;
+    background-color: #dee2e6;
+    cursor: pointer;
+}
+.button:hover{
+    box-shadow: 1px 1px 2px black;
+    height:1.6rem;
+    width:6.1rem;
+}
+.button:active{
+    background-color: #002F31;
+    color:white;
+}
+.food-availability{
+    width:7rem;
+}
+.food-availability:hover{
+    width:7.1rem;
+}
+
+#mapContainer {
+    display: none; /* Initially hidden */
+    width: 100%;
+    height: 400px;
+}
+#map {
+    width: 100%;
+    height: 100%;
+}
+.advertise{
+    height:40rem;
+    width:100%;
+    background-image: url("Projects.png");
+    background-size: cover;
+}
+.add{
+    height:4rem;
+    width:100%;
+    position: absolute;
+    top :15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-family: "Yusei Magic", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+.info{
+    height:4rem;
+    width:100%;
+    position: absolute;
+    top :18rem;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.footer{
+    margin-top: 3rem;
+    height:25rem;
+    text-align: center;
+    line-height: 1rem;
+}
+.content{
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.card-info{
+    height:10rem;
+    width:20rem;
+    background-color: white;
+    color:black;
+    text-align: left;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    border: 1px solid black;
+    border-radius: 0.4rem;
+    line-height: 1rem;
+}
+h3 {
+    position: relative;
+    opacity: 0;
+    animation: slideInH3 1s ease-out forwards;
+}
+
+p {
+    position: relative;
+    opacity: 0;
+    animation: slideInP 1s ease-out 0.5s forwards;
+}
+
+@keyframes slideInH3 {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInP {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.recommendation-heading{
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+.recommendation h2{
+  padding-left: 1rem;
+}
+.recommendation{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height:25rem;
+    overflow-x:auto;
+    white-space: nowrap; 
+    scrollbar-width: none;
+
+}
+.pg-card{
+    height:22rem;
+    width:20rem;
+    background-color: white;
+    margin-left: 2rem;
+    border-radius: 0.5rem;
+    border:1px solid #002F31;
+    box-shadow: 1px 1px 2px #002F31;
+    cursor: pointer;
+}
+.pg-card:hover{
+    height: 22.5rem;
+    border-color: black;
+}
+.pic{
+    height:15rem;
+    width:20rem;
+    border: 1px solid black;
+    /* background: url("/Data/bed1.jpg");
+    background-size: cover; */
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    cursor: pointer;
+}
+.pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.location{
+    height:1rem;
+    margin: 0.8rem;
+    display:flex;
+    text-align: center;
+    justify-content: left;
+}
+.details{
+    line-height: 0.6rem;
+}
+.location #location{
+    margin-top:0.5rem;
+    margin-left: -0.7rem;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.details #price,#location{
+    padding-left: 1rem;
+}
+.facilities{
+    margin:1rem;
+    height:2.2rem;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+.facilities div{
+    display: flex;
+    align-items: center;
+}
+.facilities #p1{
+    margin-bottom: 1rem;
+    margin-right: 0.5rem;
+    font-size: large;
+}
+.facilities #p2{
+    margin-bottom: 1rem;
+    margin-right: 0.5rem;
+    font-size: large;
+}
+.back-to-top a{
+    text-decoration: none;
+    color:white;
+}
+.back-to-top{
+    background-color: #002F31;
+    color: white;
+    height:2.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.information{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    height: 20rem;
+    width: 100%;
+}
+.information ul{
+    line-height: 1.4rem;
+}
+.information ul a{
+    text-decoration: none;
+    color: black;
+}
+.about-us{
+    width:40rem;
+    font-size: large;
+    line-height: 1.4;
+    padding: 1rem;
+}
+.connect{
+    padding-left: 1rem;
+    height:10rem;
+    width:10rem;
+    border-radius: 0.3rem;
+}
+footer{
+    background-color: #002F31;
+    width:100%;
+    height: 3rem;
+    border-bottom: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: white;
+}
+footer p{
+    margin-left: 2rem;
+}
