@@ -76,7 +76,9 @@ body{
     color: #002F31;
     font-size: 1.25rem;
 }
-
+.menu-option:hover{
+    font-size: 1.7rem;
+}
 #anchor{
     padding-bottom: 0.5rem;
     margin-left: 0.5rem;

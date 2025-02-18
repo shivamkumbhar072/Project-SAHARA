@@ -1,0 +1,8 @@
+@media(min-width:430px){
+    .add h3{
+        font-size: 1.4rem;
+    }
+    .info p{
+        font-size: 1rem;
+    }
+}
