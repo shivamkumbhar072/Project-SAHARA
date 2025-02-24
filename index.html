@@ -9,24 +9,26 @@
     <title>SAHARA-Home page</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="suboptions.css">
-    <link rel="icon" href="Icon.png">
+    <link rel="icon" href="/Images/Icon.png">
     <script defer src="app.js"></script>
-    <script async defer src="https://maps.gomaps.pro/maps/api/js?key=AlzaSyU8TEalXx_JjxFGaN6HnoWOyEdtNOtPxDl&libraries=places" onload="initMap()"></script>
+    <script async defer src="https://maps.gomaps.pro/maps/api/js?key=AlzaSy0FPa7wXDYpIoGrGJFYVK1JHdGjHH2PzRg&libraries=places" onload="initMap()"></script>
+
 </head>
 <body>
     <form action="/action" class="navbar">
         <div class="logo">
-            <img src="logo.png" class="image">
+            <img src="/Images/logo.png" class="image">
         </div>
             
-        <input type="text" id="searchBox" placeholder="Search for places" class="searchbar" name = "search">
+        <input type="text" id="locationInput" placeholder="Search for places" class="searchbar" name = "search">
         <div class="options">
             <div class="logi">
                 <label for="login"><span class="material-symbols-outlined">person</span></label>
-                <a href="#" class="anchor" id = "login">Login</a>
+                <a href="#" class="anchor" id = "login" onclick="redirectToLogin()">Login</a>
             </div>
             <a href="#" class="menu"><span class="material-symbols-outlined menu-option" >menu</span></a>
         </div>
+        
     </form>
     <div class="navbar-2">
         <label for="click" id ="filter-btn">Filters</label>
@@ -40,6 +42,7 @@
         </div>
     </div>
     <div class="advertise">
+        <div id="map"></div>
         <div class="add">
             <h3>PG Hunting Made Simple & Stress-Free!</h3>
         </div>
@@ -157,7 +160,7 @@
     <hr>
     <div class="footer">
         <h2>Why Choose SAHARA ?</h2>
-        <p>We make finding your perfect PG accommodation easy and hassle-free</p>
+        <p class ="para1">We make finding your perfect PG accommodation easy and hassle-free</p>
         <div class="content">
             <div class="card-info" id = "card1">
                 <h3>Verified Properties</h3>
@@ -195,9 +198,9 @@
         </div>
     </div>
     <footer>
-        <p>contact us </p>
+        <p>Contact us </p>
         <p>Gmail : sahara@gmail.com</p>
-        <p>phone : 8668400104</p>
+        <p>phone : +91-8668400104</p>
     </footer>
   
 </body>

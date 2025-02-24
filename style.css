@@ -53,7 +53,7 @@ body{
 }
 .logi #login{
     padding-bottom: 2.5px;
-    margin-left: 1px;
+    margin-left: 1px;#002F31
 }
 .anchor{
     text-decoration: none;
@@ -96,7 +96,7 @@ body{
     z-index: 999;
 }
 .filters{
-    position:fixed;
+    position:absolute;
     right:-40rem;
     height: 100%;
     width: 40rem;
@@ -114,7 +114,7 @@ body{
     margin-right: 2rem;
     height:1.5rem;
     width:4.5rem;
-    background-color: #002F31;
+    background-color: ;
     padding-left: 1.2rem;
     font-size: 1.3rem;
     border:1px solid black;
@@ -123,6 +123,7 @@ body{
     text-decoration: none;
     color: white;
     cursor: pointer;
+    z-index: 1000;
 }
 #filter-btn:hover{
     height:1.6rem;
@@ -171,7 +172,7 @@ body{
 .advertise{
     height:40rem;
     width:100%;
-    background-image: url("Projects.png");
+    background-image: url("/Images/Projects.png");
     background-size: cover;
 }
 .add{
@@ -402,4 +403,7 @@ footer{
 }
 footer p{
     margin-left: 2rem;
+}
+#map{
+    display: none;
 }

@@ -1,8 +1,58 @@
-@media(min-width:430px){
+@media(max-width:1048px){
+    .back-to-top{
+        margin-top: 10rem;
+    }
+    #card3{
+        margin-top: 2rem;
+    }
+}
+
+@media(max-width:683px){
     .add h3{
         font-size: 1.4rem;
     }
     .info p{
         font-size: 1rem;
+        padding:2rem;
+        align-content: center;
     }
+    #filter-btn{
+        margin-left: 0.6rem;
+    }
+    #click:checked ~ .filters{
+        right:-18rem;
+    }
+    .filters{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        overflow-x:auto;
+        white-space: nowrap; 
+        scrollbar-width: none;
+    }
+    .filters .button{
+        margin:0.2rem;
+    }
+    .footer .para1{
+        font-size: 0.9rem;
+    }
+    .content{
+        height:40rem;
+    }
+    .back-to-top{
+        margin-top: 25rem;
+    }
+    footer{
+        margin-top: 10rem;
+    }
+    .connect{
+        margin-right: 17rem;
+    }
+}
+@media (min-width: 900px) and (max-width: 1000px){
+    #click:checked ~ .filters{
+        position: absolute;
+        left: 8rem;
+    }
+    
 }

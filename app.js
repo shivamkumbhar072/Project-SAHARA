@@ -1,61 +1,38 @@
-function initMap() {
-    if (typeof google === "undefined") {
-        console.error("Google Maps API failed to load.");
-        return;
-    }
-    var location = { lat: 19.0760, lng: 72.8777 }; // Mumbai, India
-    var map = new google.maps.Map(document.getElementById("map"), {
-        center: location,
-        zoom: 13,
-    });
-    var input = document.getElementById("searchBox");
-    var searchBox = new google.maps.places.SearchBox(input);
-    
-    map.addListener("bounds_changed", function () {
-        searchBox.setBounds(map.getBounds());
-    });
+let map;
+        let marker;
+        let autocomplete;
 
-    var markers = [];
-    searchBox.addListener("places_changed", function () {
-        var places = searchBox.getPlaces();
-        if (places.length === 0) return;
-
-        markers.forEach((marker) => marker.setMap(null));
-        markers = [];
-        var bounds = new google.maps.LatLngBounds();
-
-        places.forEach((place) => {
-            if (!place.geometry) return;
-            var marker = new google.maps.Marker({
-                map: map,
-                title: place.name,
-                position: place.geometry.location,
+        function initMap() {
+            const defaultLocation = { lat: 18.5204, lng: 73.8567 }; // Pune, India
+            
+            // Initialize Map
+            map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 12,
+                center: defaultLocation
             });
-            markers.push(marker);
-            bounds.extend(place.geometry.location);
-        });
 
-        map.fitBounds(bounds);
-    });
-}
+            // Add Marker
+            marker = new google.maps.Marker({
+                position: defaultLocation,
+                map: map
+            });
 
-document.addEventListener("DOMContentLoaded", function () {
-    var mapButton = document.getElementById("mapButton");
-    var mapContainer = document.getElementById("mapContainer");
-
-    if (mapButton && mapContainer) {
-        mapContainer.style.display = "none"; // Hide the map initially
-
-        mapButton.addEventListener("click", function () {
-            if (mapContainer.style.display === "none") {
-                mapContainer.style.display = "block";
-                if (!window.mapInitialized) {
-                    initMap();
-                    window.mapInitialized = true;
+            // Initialize Places Autocomplete
+            autocomplete = new google.maps.places.Autocomplete(document.getElementById("locationInput"));
+            autocomplete.addListener("place_changed", function() {
+                const place = autocomplete.getPlace();
+                if (!place.geometry) {
+                    alert("No details available for this location.");
+                    return;
                 }
-            } else {
-                mapContainer.style.display = "none";
-            }
-        });
-    }
-});
+
+                // Update map and marker
+                map.setCenter(place.geometry.location);
+                map.setZoom(14);
+                marker.setPosition(place.geometry.location);
+            });
+        }
+
+function redirectToLogin() {
+    window.location.href = "login.html"; // Change this to your login page URL
+}
