@@ -5,8 +5,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url("/Images/x.png");
-    ;
+    background-color: white;
+    /* background: url("Images/x.png"); */
 }
 
 .box {
