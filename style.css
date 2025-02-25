@@ -114,7 +114,7 @@ body{
     margin-right: 2rem;
     height:1.5rem;
     width:4.5rem;
-    background-color: ;
+    background-color: #002F31;
     padding-left: 1.2rem;
     font-size: 1.3rem;
     border:1px solid black;
@@ -172,7 +172,7 @@ body{
 .advertise{
     height:40rem;
     width:100%;
-    background-image: url("/Images/Projects.png");
+    background-image: url("Images/Projects.png");
     background-size: cover;
 }
 .add{
